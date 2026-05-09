@@ -36,7 +36,7 @@ class Smpeg2 < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   # Fix -flat_namespace being used on Big Sur and later.
   # We patch `libtool.m4` because we need to generate the `configure` script.
