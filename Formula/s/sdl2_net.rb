@@ -35,7 +35,7 @@ class Sdl2Net < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   def install
     inreplace "SDL2_net.pc.in", "@prefix@", HOMEBREW_PREFIX
