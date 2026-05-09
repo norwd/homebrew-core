@@ -32,7 +32,7 @@ class Sdl2Ttf < Formula
   depends_on "pkgconf" => :build
   depends_on "freetype"
   depends_on "harfbuzz"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   def install
     inreplace "SDL2_ttf.pc.in", "@prefix@", HOMEBREW_PREFIX
