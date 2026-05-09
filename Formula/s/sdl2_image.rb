@@ -29,7 +29,7 @@ class Sdl2Image < Formula
   depends_on "libavif"
   depends_on "libpng"
   depends_on "libtiff"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
   depends_on "webp"
 
   def install
