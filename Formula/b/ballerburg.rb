@@ -18,7 +18,7 @@ class Ballerburg < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
