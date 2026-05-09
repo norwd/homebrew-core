@@ -29,7 +29,7 @@ class Exult < Formula
 
   depends_on "libogg"
   depends_on "libvorbis"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   on_linux do
     depends_on "alsa-lib"
