@@ -36,7 +36,7 @@ class DosboxX < Formula
   depends_on "freetype"
   depends_on "libpng"
   depends_on "libslirp"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   uses_from_macos "ncurses"
 
