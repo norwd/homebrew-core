@@ -16,7 +16,7 @@ class Openjazz < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
   depends_on "sdl2_net"
 
   on_linux do
