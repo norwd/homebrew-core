@@ -21,7 +21,7 @@ class Ppsspp < Formula
 
   depends_on "libzip"
   depends_on "miniupnpc"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
   depends_on "snappy"
   depends_on "zstd"
 
