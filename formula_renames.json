@@ -171,6 +171,7 @@
   "rustup-init": "rustup",
   "screenbrightness": "brightness",
   "sdl": "sdl12-compat",
+  "sdl2": "sdl2-compat",
   "selenium-server-standalone": "selenium-server",
   "server-go": "openiothub-server",
   "sheen-bidi": "sheenbidi",
