@@ -21,7 +21,7 @@ class Mdxmini < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "152c18564d3252af6530331c08788108b99fbac328066ace0c58f94428fe7b4e"
   end
 
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   resource "test_song" do
     url "https://ftp.modland.com/pub/modules/MDX/-%20unknown/Popful%20Mail/pop-00.mdx"
