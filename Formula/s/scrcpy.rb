@@ -24,7 +24,7 @@ class Scrcpy < Formula
   depends_on "pkgconf" => :build
   depends_on "ffmpeg"
   depends_on "libusb"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   resource "prebuilt-server" do
     url "https://github.com/Genymobile/scrcpy/releases/download/v3.3.4/scrcpy-server-v3.3.4", using: :nounzip
