@@ -1,8 +1,8 @@
 class Martin < Formula
   desc "Blazing fast tile server, tile generation, and mbtiles tooling"
   homepage "https://martin.maplibre.org"
-  url "https://github.com/maplibre/martin/archive/refs/tags/martin-v1.6.0.tar.gz"
-  sha256 "242000c076906b5b1f82283f91182cb0b2b9a35db6b97c880282c980c43cd3e6"
+  url "https://github.com/maplibre/martin/archive/refs/tags/martin-v1.9.1.tar.gz"
+  sha256 "7a4056a6735b8f8019ae247060a0a1bef1e9f59fc192d802a6f538b3cc93f58f"
   license any_of: ["Apache-2.0", "MIT"]
 
   livecheck do
@@ -21,10 +21,33 @@ class Martin < Formula
 
   depends_on "node" => :build
   depends_on "rust" => :build
+  depends_on "openssl@3"
 
+  uses_from_macos "git" => :build
   uses_from_macos "sqlite" => :test
+  uses_from_macos "curl"
+
+  on_linux do
+    # `martin`'s `rendering` feature pulls in `maplibre_native` crate which builds maplibre-native from source.
+    depends_on "cmake" => :build
+    depends_on "pkgconf" => :build
+    depends_on "fontconfig"
+    depends_on "freetype"
+    depends_on "glfw"
+    depends_on "glslang"
+    depends_on "icu4c@78"
+    depends_on "jpeg-turbo"
+    depends_on "libpng"
+    depends_on "libuv"
+    depends_on "mesa"
+    depends_on "webp"
+    depends_on "zlib-ng-compat"
+  end
 
   def install
+    # Ensure that the `openssl` crate picks up the intended library.
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+
     system "cargo", "install", *std_cargo_args(path: "martin")
     system "cargo", "install", *std_cargo_args(path: "mbtiles")
     pkgshare.install "tests/fixtures/mbtiles"
