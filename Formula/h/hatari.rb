@@ -18,7 +18,7 @@ class Hatari < Formula
 
   depends_on "cmake" => :build
   depends_on "libpng"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   on_linux do
     depends_on "libx11"
