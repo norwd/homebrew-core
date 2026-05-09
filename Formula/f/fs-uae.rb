@@ -35,7 +35,7 @@ class FsUae < Formula
   depends_on "glib"
   depends_on "libmpeg2"
   depends_on "libpng"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
 
   uses_from_macos "zip"
 
