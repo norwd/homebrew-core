@@ -38,7 +38,7 @@ class Sdl2Mixer < Formula
   depends_on "libxmp"
   depends_on "mpg123"
   depends_on "opusfile"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
   depends_on "wavpack"
 
   def install
