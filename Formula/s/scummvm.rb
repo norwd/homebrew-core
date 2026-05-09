@@ -35,7 +35,7 @@ class Scummvm < Formula
   depends_on "libvorbis"
   depends_on "libvpx"
   depends_on "mad"
-  depends_on "sdl2"
+  depends_on "sdl2-compat"
   depends_on "theora"
 
   on_macos do
